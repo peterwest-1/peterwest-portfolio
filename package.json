@@ -3,7 +3,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start -p $PORT",
+    "lint": "next lint"
   },
   "dependencies": {
     "@portabletext/react": "^1.0.3",
@@ -20,6 +21,8 @@
   "devDependencies": {
     "@sanity/cli": "^2.27.0",
     "autoprefixer": "10.4.2",
+    "eslint": "8.10.0",
+    "eslint-config-next": "12.1.0",
     "postcss": "8.4.7",
     "tailwindcss": "^3.0.23"
   }
