@@ -1,5 +1,7 @@
 # A statically generated blog example using Next.js and Sanity
 
+https://github.com/vercel/next.js/tree/canary/examples/cms-sanity
+
 This example showcases Next.js's [Static Generation](https://nextjs.org/docs/basic-features/pages) feature using [Sanity](https://www.sanity.io/) as the data source.
 
 You'll get:
@@ -116,11 +118,11 @@ SANITY_PREVIEW_SECRET=...
 Now, go back to `resolveProductionUrl.js` and add a function that will receive the full document that was selected for previewing:
 
 ```js
-const previewSecret = 'MY_SECRET' // Copy the string you used for SANITY_PREVIEW_SECRET
-const projectUrl = 'http://localhost:3000'
+const previewSecret = "MY_SECRET"; // Copy the string you used for SANITY_PREVIEW_SECRET
+const projectUrl = "http://localhost:3000";
 
 export default function resolveProductionUrl(document) {
-  return `${projectUrl}/api/preview?secret=${previewSecret}&slug=${document.slug.current}`
+  return `${projectUrl}/api/preview?secret=${previewSecret}&slug=${document.slug.current}`;
 }
 ```
 
