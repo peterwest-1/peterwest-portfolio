@@ -5,8 +5,9 @@ import HeroPost from "../components/hero-post";
 import Intro from "../components/intro";
 import Layout from "../components/layout";
 import { TITLE } from "../lib/constants";
-import { indexQuery } from "../lib/queries";
+import { indexQuery } from "../lib/queries/post";
 import { getClient, overlayDrafts } from "../lib/sanity.server";
+import Skills from "../components/skills";
 
 export default function Index({ allPosts, preview }) {
   const heroPost = allPosts[0];
@@ -19,6 +20,7 @@ export default function Index({ allPosts, preview }) {
         </Head>
         <Container>
           <Intro />
+
           {heroPost && (
             <HeroPost
               title={heroPost.title}
@@ -29,6 +31,7 @@ export default function Index({ allPosts, preview }) {
               excerpt={heroPost.excerpt}
             />
           )}
+          <Skills />
           {morePosts.length > 0 && <MoreStories posts={morePosts} />}
         </Container>
       </Layout>

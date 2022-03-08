@@ -1,4 +1,4 @@
-import PostPreview from "./post-preview";
+import ProjectPreview from "./project-preview";
 
 export default function MoreProjects({ projects }) {
   return (
@@ -8,7 +8,7 @@ export default function MoreProjects({ projects }) {
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-16 lg:gap-x-32 gap-y-20 md:gap-y-32 mb-32">
         {projects.map((project) => (
-          <PostPreview
+          <ProjectPreview
             key={project.slug}
             title={project.title}
             coverImage={project.coverImage}

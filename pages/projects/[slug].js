@@ -3,25 +3,26 @@ import { useRouter } from "next/router";
 import ErrorPage from "next/error";
 import Container from "../../components/container";
 import PostBody from "../../components/post-body";
-import MoreStories from "../../components/more-stories";
 import Header from "../../components/header";
 import PostHeader from "../../components/post-header";
 import SectionSeparator from "../../components/section-separator";
 import Layout from "../../components/layout";
 import PostTitle from "../../components/post-title";
 import { TITLE } from "../../lib/constants";
-import { projectQuery, projectsSlugsQuery } from "../../lib/queries";
+import { projectQuery, projectSlugsQuery } from "../../lib/queries/project";
 import { urlForImage, usePreviewSubscription } from "../../lib/sanity";
 import {
   sanityClient,
   getClient,
   overlayDrafts,
 } from "../../lib/sanity.server";
+import MoreProjects from "../../components/more-projects";
 
 export default function Project({ data = {}, preview }) {
   const router = useRouter();
 
   const slug = data?.project?.slug;
+  console.log(slug);
   const {
     data: { project, moreProjects },
   } = usePreviewSubscription(projectQuery, {
@@ -68,7 +69,9 @@ export default function Project({ data = {}, preview }) {
               <PostBody content={project.content} />
             </article>
             <SectionSeparator />
-            {moreProjects.length > 0 && <MoreStories posts={moreProjects} />}
+            {moreProjects.length > 0 && (
+              <MoreProjects projects={moreProjects} />
+            )}
           </>
         )}
       </Container>
@@ -77,8 +80,8 @@ export default function Project({ data = {}, preview }) {
 }
 
 export async function getStaticProps({ params, preview = false }) {
-  const { projects, moreProjects } = await getClient(preview).fetch(
-    projectsQuery,
+  const { project, moreProjects } = await getClient(preview).fetch(
+    projectQuery,
     {
       slug: params.slug,
     }
@@ -88,7 +91,7 @@ export async function getStaticProps({ params, preview = false }) {
     props: {
       preview,
       data: {
-        projects,
+        project,
         moreProjects: overlayDrafts(moreProjects),
       },
     },
@@ -96,7 +99,7 @@ export async function getStaticProps({ params, preview = false }) {
 }
 
 export async function getStaticPaths() {
-  const paths = await sanityClient.fetch(projectsSlugsQuery);
+  const paths = await sanityClient.fetch(projectSlugsQuery);
   return {
     paths: paths.map((slug) => ({ params: { slug } })),
     fallback: true,
