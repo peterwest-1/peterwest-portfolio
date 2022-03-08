@@ -6,7 +6,7 @@ export default function Intro() {
         Peter West.
       </h1>
       <div className="flex">
-        <NavLink path="/home" label={"Home."} />
+        <NavLink path="/" label={"Home."} />
         <NavLink path="/about" label={"About."} />
         <NavLink path="/portfolio" label={"Portfolio."} />
         <NavLink path="/contact" label={"Contact."} />
