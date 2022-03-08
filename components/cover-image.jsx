@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { urlForImage } from "../lib/sanity";
 
-export default function CoverImage({ title, slug, image: source }) {
+export default function CoverImage({ title, slug, image: source, path }) {
   const image = source ? (
     <div
       className={cn("shadow-small", {
@@ -11,6 +11,7 @@ export default function CoverImage({ title, slug, image: source }) {
       })}
     >
       <Image
+        priority
         layout="responsive"
         width={2000}
         height={600}
@@ -25,7 +26,7 @@ export default function CoverImage({ title, slug, image: source }) {
   return (
     <div className="sm:mx-0">
       {slug ? (
-        <Link href={`/posts/${slug}`}>
+        <Link href={`/${path}/${slug}`}>
           <a aria-label={title}>{image}</a>
         </Link>
       ) : (

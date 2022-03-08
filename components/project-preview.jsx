@@ -14,7 +14,12 @@ export default function ProjectPreview({
   return (
     <div>
       <div className="mb-5">
-        <CoverImage slug={slug} title={title} image={coverImage} />
+        <CoverImage
+          slug={slug}
+          title={title}
+          image={coverImage}
+          path="projects"
+        />
       </div>
       <h3 className="text-3xl mb-3 leading-snug">
         <Link href={`/projects/${slug}`}>
