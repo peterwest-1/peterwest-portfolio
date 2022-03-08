@@ -16,54 +16,54 @@ export default function Contact() {
             Contact Me
           </h1>
           <div>
-            <div class="w-full max-w-xl ">
+            <div className="w-full max-w-xl ">
               <form
                 action="https://formspree.io/f/moqrwrjl"
                 method="POST"
-                class="bg-white border rounded px-8 pt-6 pb-8 mb-4"
+                className="bg-white border rounded px-8 pt-6 pb-8 mb-4"
               >
-                <div class="mb-4">
+                <div className="mb-4">
                   <label
                     className="block text-black  text-lg font-bold tracking-tighter leading-tight mb-2"
-                    for="name"
+                    htmlFor="name"
                   >
                     Name
                   </label>
                   <input
-                    class=" appearance-none border  w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    className=" appearance-none border  w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     id="name"
                     name="name"
                     type="text"
                   />
                 </div>
-                <div class="mb-4">
+                <div className="mb-4">
                   <label
                     className="block text-black text-lg  font-bold tracking-tighter leading-tight mb-2"
-                    for="email"
+                    htmlFor="email"
                   >
                     Email
                   </label>
                   <input
-                    class=" appearance-none border  w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                    className=" appearance-none border  w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
                     id="email"
                     name="email"
                     type="email"
                   />
                 </div>
-                <div class="mb-4  ">
+                <div className="mb-4  ">
                   <label
                     className="block text-black text-lg font-bold tracking-tighter leading-tight mb-2"
-                    for="message"
+                    htmlFor="message"
                   >
                     Message
                   </label>
                   <textarea
-                    class=" appearance-none border w-full h-24 py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                    className=" appearance-none border w-full h-24 py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
                     id="message"
                     name="message"
                   />
                 </div>
-                <div class="flex items-center justify-between">
+                <div className="flex items-center justify-between">
                   <button
                     type="submit"
                     className=" bg-black hover:bg-white hover:text-black border border-black text-white font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mb-6 lg:mb-0"
