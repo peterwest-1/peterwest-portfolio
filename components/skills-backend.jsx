@@ -13,7 +13,7 @@ export default function SkillsBackend() {
       {/* <div className="mb-5"></div> */}
       <h3 className="text-3xl md:text-3xl text-center font-semibold tracking-tighter leading-tight md:pr-4 pt-4">
         <Link href="/skills/backend">
-          <a className="hover:underline">Backend</a>
+          <a >Backend</a>
         </Link>
       </h3>
       <p className="text-lg leading-relaxed text-center my-4 px-8">
@@ -37,7 +37,7 @@ export default function SkillsBackend() {
         <DiTerminal size={sizeSmall} />
       </div>
 
-      <Link href="/" passHref={true}>
+      <Link href="/skills/backend" passHref={true}>
         <a className="flex justify-center mx-16 bg-white  hover:bg-black hover:text-white border border-black text-black font-bold py-3  px-12 lg:px-8 duration-200 transition-colors mb-6 lg:mb-0">
           See More
         </a>
