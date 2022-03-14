@@ -23,7 +23,7 @@ export default function ProjectPreview({
       </div>
       <h3 className="text-3xl mb-3 leading-snug">
         <Link href={`/projects/${slug}`}>
-          <a className="hover:underline">{title}</a>
+          <a className="font-bold hover:underline">{title}</a>
         </Link>
       </h3>
       <div className="text-lg mb-4">

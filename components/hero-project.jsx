@@ -25,10 +25,10 @@ export default function HeroProject({
         <div>
           <h3 className="mb-4 text-4xl lg:text-6xl leading-tight">
             <Link href={`/projects/[slug]`} as={`/projects/${slug}`}>
-              <a className="hover:underline">{title}</a>
+              <a className="font-bold hover:underline">{title}</a>
             </Link>
           </h3>
-          <div className="mb-4 md:mb-0 text-lg">
+          <div className="mb-4 md:mb-0 text-lg font-sem">
             <Date dateString={date} />
           </div>
         </div>

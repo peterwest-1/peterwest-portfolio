@@ -34,6 +34,9 @@ export default {
       name: "coverImage",
       title: "Cover Image",
       type: "image",
+      options: {
+        hotspot: true,
+      },
     },
     {
       name: "category",
@@ -41,7 +44,8 @@ export default {
       type: "string",
       options: {
         list: [
-          { title: "Mobile", value: "mobile" },
+          { title: "Mobile Development", value: "mobile" },
+          { title: "Web Development", value: "web" },
           { title: "Front End", value: "frontend" },
           { title: "Back End", value: "backend" },
         ],
