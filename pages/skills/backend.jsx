@@ -33,6 +33,7 @@ export default function Backend({ allProjects, preview }) {
               author={heroPost.author}
               slug={heroPost.slug}
               excerpt={heroPost.excerpt}
+              category={heroPost.category}
             />
           )}
           {morePosts.length > 0 && <MoreProjects projects={morePosts} />}

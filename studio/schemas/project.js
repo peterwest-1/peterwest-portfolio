@@ -46,8 +46,6 @@ export default {
         list: [
           { title: "Mobile Development", value: "mobile" },
           { title: "Web Development", value: "web" },
-          { title: "Front End", value: "frontend" },
-          { title: "Back End", value: "backend" },
         ],
       },
     },

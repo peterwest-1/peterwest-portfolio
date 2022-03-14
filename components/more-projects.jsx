@@ -16,6 +16,7 @@ export default function MoreProjects({ projects }) {
             author={project.author}
             slug={project.slug}
             excerpt={project.excerpt}
+            category={project.category}
           />
         ))}
       </div>

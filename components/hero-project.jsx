@@ -10,7 +10,10 @@ export default function HeroProject({
   excerpt,
   author,
   slug,
+  category,
 }) {
+
+  
   return (
     <section>
       <div className="mb-8 md:mb-16">
@@ -28,6 +31,7 @@ export default function HeroProject({
               <a className="font-bold hover:underline">{title}</a>
             </Link>
           </h3>
+          <span className="inline-flex items-center justify-center px-2 py-1 text-sm uppercase font-bold leading-none text-white bg-black rounded">{category}</span>
           <div className="mb-4 md:mb-0 text-lg font-sem">
             <Date dateString={date} />
           </div>

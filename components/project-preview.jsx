@@ -10,6 +10,7 @@ export default function ProjectPreview({
   excerpt,
   author,
   slug,
+  category
 }) {
   return (
     <div>
@@ -26,6 +27,7 @@ export default function ProjectPreview({
           <a className="font-bold hover:underline">{title}</a>
         </Link>
       </h3>
+      <span className="inline-flex items-center justify-center px-2 py-1 text-sm uppercase font-bold leading-none text-white bg-black rounded">{category}</span>
       <div className="text-lg mb-4">
         <Date dateString={date} />
       </div>
