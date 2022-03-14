@@ -52,7 +52,7 @@ export default function SkillsMobile() {
 
       <Link href="/skills/mobile" passHref={true}>
         <a className="flex justify-center mx-16 bg-white  hover:bg-black hover:text-white border border-black text-black font-bold py-3  px-12 lg:px-8 duration-200 transition-colors mb-6 lg:mb-0">
-          See More
+          Mobile Projects
         </a>
       </Link>
     </div>

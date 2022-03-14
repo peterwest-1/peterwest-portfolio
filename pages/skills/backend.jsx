@@ -6,7 +6,7 @@ import Container from "../../components/container";
 import HeroProject from "../../components/hero-project";
 
 import MoreProjects from "../../components/more-projects";
-import { projectIndexBackendQuery } from "../../lib/queries/project";
+import { projectIndexWebQuery } from "../../lib/queries/project";
 
 import { getClient, overlayDrafts } from "../../lib/sanity.server";
 
@@ -45,7 +45,7 @@ export default function Backend({ allProjects, preview }) {
 
 export async function getStaticProps({ preview = false }) {
   const allProjects = overlayDrafts(
-    await getClient(preview).fetch(projectIndexBackendQuery)
+    await getClient(preview).fetch(projectIndexWebQuery)
   );
   return {
     props: { allProjects, preview },
