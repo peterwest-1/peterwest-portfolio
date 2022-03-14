@@ -36,6 +36,19 @@ export default {
       type: "image",
     },
     {
+      name: "category",
+      title: "Category",
+      type: "string",
+      options: {
+        list: [
+          { title: "Mobile Development", value: "mobile" },
+          { title: "Web Development", value: "web" },
+          { title: "Front End", value: "frontend" },
+          { title: "Back End", value: "backend" },
+        ],
+      },
+    },
+    {
       name: "date",
       title: "Date",
       type: "datetime",

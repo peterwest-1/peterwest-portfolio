@@ -36,6 +36,18 @@ export default {
       type: "image",
     },
     {
+      name: "category",
+      title: "Category",
+      type: "string",
+      options: {
+        list: [
+          { title: "Mobile", value: "mobile" },
+          { title: "Front End", value: "frontend" },
+          { title: "Back End", value: "backend" },
+        ],
+      },
+    },
+    {
       name: "date",
       title: "Date",
       type: "datetime",
