@@ -4,7 +4,7 @@ import Header from "../../components/header";
 import Layout from "../../components/layout";
 import Container from "../../components/container";
 import HeroProject from "../../components/hero-project";
-
+import Nothing from "../../components/nothing";
 import MoreProjects from "../../components/more-projects";
 import { projectIndexGeneralQuery  } from "../../lib/queries/project";
 
@@ -25,7 +25,7 @@ export default function Backend({ allProjects, preview }) {
           <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-tight md:leading-none mb-12 text-center md:text-left">
           General Development
           </h1>
-          {!heroPost ? <p className=" text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tighter leading-tight md:leading-none mb-12  md:text-left">Nothing here yet, I'm afraid</p> : (
+          {!heroPost ? <Nothing /> : (
             <HeroProject
               title={heroPost.title}
               coverImage={heroPost.coverImage}
