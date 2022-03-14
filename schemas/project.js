@@ -46,6 +46,7 @@ export default {
         list: [
           { title: "Mobile Development", value: "mobile" },
           { title: "Web Development", value: "web" },
+          { title: "General Development", value: "general" },
         ],
       },
     },

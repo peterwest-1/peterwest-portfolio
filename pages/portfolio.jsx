@@ -6,6 +6,7 @@ import Layout from "../components/layout";
 import MoreProjects from "../components/more-projects";
 import { projectIndexQuery } from "../lib/queries/project";
 import { getClient, overlayDrafts } from "../lib/sanity.server";
+import { TITLE } from "../lib/constants";
 
 export default function Portfolio({ allProjects, preview }) {
   const heroPost = allProjects[0];
@@ -15,7 +16,7 @@ export default function Portfolio({ allProjects, preview }) {
     <>
       <Layout>
         <Head>
-          <title>Portfolio</title>
+          <title>Portfolio | {TITLE}</title>
         </Head>
         <Container>
           <Header />

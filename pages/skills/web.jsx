@@ -10,7 +10,7 @@ import { projectIndexWebQuery } from "../../lib/queries/project";
 
 import { getClient, overlayDrafts } from "../../lib/sanity.server";
 
-export default function Backend({ allProjects, preview }) {
+export default function Frontend({ allProjects, preview }) {
   const heroPost = allProjects[0];
   const morePosts = allProjects.slice(1);
 
@@ -18,14 +18,14 @@ export default function Backend({ allProjects, preview }) {
     <>
       <Layout>
         <Head>
-          <title>Back End Development | {TITLE} </title>
+          <title>Web Development | {TITLE} </title>
         </Head>
         <Container>
           <Header />
           <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-tight md:leading-none mb-12 text-center md:text-left">
-            Back End Development
+          Web Development
           </h1>
-          {heroPost && (
+           {!heroPost ? <p className=" text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tighter leading-tight md:leading-none mb-12  md:text-left">Nothing here yet, I'm afraid</p> : (
             <HeroProject
               title={heroPost.title}
               coverImage={heroPost.coverImage}

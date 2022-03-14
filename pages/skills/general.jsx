@@ -6,11 +6,11 @@ import Container from "../../components/container";
 import HeroProject from "../../components/hero-project";
 
 import MoreProjects from "../../components/more-projects";
-import { projectIndexWebQuery } from "../../lib/queries/project";
+import { projectIndexGeneralQuery  } from "../../lib/queries/project";
 
 import { getClient, overlayDrafts } from "../../lib/sanity.server";
 
-export default function Frontend({ allProjects, preview }) {
+export default function Backend({ allProjects, preview }) {
   const heroPost = allProjects[0];
   const morePosts = allProjects.slice(1);
 
@@ -18,14 +18,14 @@ export default function Frontend({ allProjects, preview }) {
     <>
       <Layout>
         <Head>
-          <title>Front End Development | {TITLE} </title>
+          <title>General Development | {TITLE} </title>
         </Head>
         <Container>
           <Header />
           <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-tight md:leading-none mb-12 text-center md:text-left">
-            Front End Development
+          General Development
           </h1>
-          {heroPost && (
+          {!heroPost ? <p className=" text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tighter leading-tight md:leading-none mb-12  md:text-left">Nothing here yet, I'm afraid</p> : (
             <HeroProject
               title={heroPost.title}
               coverImage={heroPost.coverImage}
@@ -45,7 +45,7 @@ export default function Frontend({ allProjects, preview }) {
 
 export async function getStaticProps({ preview = false }) {
   const allProjects = overlayDrafts(
-    await getClient(preview).fetch(projectIndexWebQuery)
+    await getClient(preview).fetch(projectIndexGeneralQuery)
   );
   return {
     props: { allProjects, preview },

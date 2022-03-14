@@ -24,7 +24,7 @@ export default function Mobile({ allProjects, preview }) {
           <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-tight md:leading-none mb-12 text-center md:text-left">
             Mobile Development
           </h1>
-          {heroPost && (
+          {!heroPost ? <p className=" text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tighter leading-tight md:leading-none mb-12  md:text-left">Nothing here yet, I'm afraid</p> : (
             <HeroProject
               title={heroPost.title}
               coverImage={heroPost.coverImage}

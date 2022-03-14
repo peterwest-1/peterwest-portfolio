@@ -2,13 +2,14 @@ import Head from "next/head";
 import Container from "../components/container";
 import Layout from "../components/layout";
 import Header from "../components/header";
+import { TITLE } from "../lib/constants";
 
 export default function Contact() {
   return (
     <>
       <Layout>
         <Head>
-          <title>Contact Me</title>
+          <title>Contact Me | {TITLE}</title>
         </Head>
         <Container>
           <Header />
