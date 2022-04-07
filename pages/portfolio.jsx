@@ -42,10 +42,9 @@ export default function Portfolio({ allProjects, preview }) {
 }
 
 export async function getStaticProps({ preview = false }) {
-  const allProjects = overlayDrafts(
-    await getClient(preview).fetch(projectIndexQuery)
-  );
+  const allProjects = overlayDrafts(await getClient(preview).fetch(projectIndexQuery));
   return {
+    revalidate: 600,
     props: { allProjects, preview },
   };
 }

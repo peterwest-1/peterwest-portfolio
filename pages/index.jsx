@@ -43,5 +43,6 @@ export async function getStaticProps({ preview = false }) {
   const allPosts = overlayDrafts(await getClient(preview).fetch(indexQuery));
   return {
     props: { allPosts, preview },
+    revalidate: 600,
   };
 }
