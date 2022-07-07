@@ -8,10 +8,12 @@ import { TITLE } from "../lib/constants";
 import { indexQuery } from "../lib/queries/post";
 import { getClient, overlayDrafts } from "../lib/sanity.server";
 import Skills from "../components/skills";
+import { analytics } from "../lib/firebase";
 
 export default function Index({ allPosts, preview }) {
   const heroPost = allPosts[0];
   const morePosts = allPosts.slice(1);
+
   return (
     <>
       <Layout preview={preview}>
