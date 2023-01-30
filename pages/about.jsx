@@ -18,7 +18,7 @@ const About = () => {
             About Me
           </h1>
           <p className="max-w-2xl mx-auto  text-4xl md:text-5xl lg:text-5xl font-semibold tracking-tighter leading-tight md:leading-none mb-12  md:text-left">
-            I&apos;m Peter West, a Developer from
+            I'm Peter West, a Developer from
             <br /> Cape Town, South Africa
           </p>
           <p className={paragraph}>
@@ -26,9 +26,9 @@ const About = () => {
             Bachelor of Science degree in Applied Mathematics and Computer Science
             <br />
             <br />
-            My love for development started when I was doing a programming subject during my first year of my
-            engineering studies. Since then I have actively been development iOS applications using UIKit and more
-            recently SwiftUI. I&apos;ve also been doing fullstack development using React and Node.
+            My love for developement started when I was doing a programming subject during my first year of my
+            engineering studies. Since then I have actively been developemnent iOS applications using UIKit and more
+            recently SwiftUI. I've also been doing fullstack developement using React and Node.
             <br />
             <br />
           </p>
