@@ -55,7 +55,7 @@ export default function Skills() {
           </h3>
           <p className="text-lg leading-relaxed text-center my-4 px-8">
             I did my first programming in <span className="font-bold">Lua</span>, then moved on to{" "}
-            <span className="font-bold">C</span> in a engineering class. Learnt <span className="font-bold">C++</span>{" "}
+            <span className="font-bold">C</span> in an engineering class. Learnt <span className="font-bold">C++</span>{" "}
             in my B.Sc and used <span className="font-bold">Python</span> with <span className="font-bold">Numpy</span>{" "}
             with my mathematics subjects
           </p>

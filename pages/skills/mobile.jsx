@@ -25,7 +25,9 @@ export default function Mobile({ allProjects, preview }) {
           <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-tight md:leading-none mb-12 text-center md:text-left">
             Mobile Development
           </h1>
-          {!heroPost ? <Nothing/> : (
+          {!heroPost ? (
+            <Nothing />
+          ) : (
             <HeroProject
               title={heroPost.title}
               coverImage={heroPost.coverImage}
@@ -44,9 +46,7 @@ export default function Mobile({ allProjects, preview }) {
 }
 
 export async function getStaticProps({ preview = false }) {
-  const allProjects = overlayDrafts(
-    await getClient(preview).fetch(projectIndexMobileQuery)
-  );
+  const allProjects = overlayDrafts(await getClient(preview).fetch(projectIndexMobileQuery));
   return {
     props: { allProjects, preview },
   };
