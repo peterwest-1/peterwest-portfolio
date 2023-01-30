@@ -23,7 +23,7 @@ const About = () => {
           </p>
           <p className={paragraph}>
             I am currently 28 years old in my final year of studies at the University of South Africa completing my
-            Bachelor of Science degree in Applied Mathematics and Computer Science
+            Bachelor of Science degree inn Applied Mathematics and Computer Science
             <br />
             <br />
             My love for developement started when I was doing a programming subject during my first year of my
